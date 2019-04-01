@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: greenhouse-service
+  name: lzh-service
 spec:
   selector:
-    app: greenhouse
+    app: lzh
   type: NodePort
   ports:
     - protocol: TCP
@@ -14,18 +14,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-greenhouse
+  name: lzh
   labels:
-    app: greenhouse
+    app: lzh
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: greenhouse
+      app: lzh
   template:
     metadata:
       labels:
-        app: greenhouse
+        app: lzh
     spec:
       imagePullSecrets:
       - name: pipeline-docker-registry
