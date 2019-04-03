@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: maven:3-jdk-8
+      image: registry.cn-shenzhen.aliyuncs.com/ibase/maven:3-jdk-8-lzh
       shellScript: mvn clean install
 - name: Publish
   steps:
