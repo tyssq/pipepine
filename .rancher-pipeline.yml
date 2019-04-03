@@ -10,5 +10,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: lzh:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
       registry: registry.cn-shenzhen.aliyuncs.com
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
