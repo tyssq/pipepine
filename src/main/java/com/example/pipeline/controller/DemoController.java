@@ -12,6 +12,6 @@ public class DemoController {
 
     @GetMapping("demo")
     public Object demo(){
-        return "廖正瀚哈哈哈";
+        return "廖正瀚哈哈哈测试";
     }
 }
